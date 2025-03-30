@@ -1,0 +1,661 @@
+<!DOCTYPE html>
+<html lang="vi">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Cửa hàng Thuốc lá Premium</title>
+
+    <link rel="stylesheet" href="https://unpkg.com/aos@next/dist/aos.css" />
+    <link rel="stylesheet" href="https://unpkg.com/swiper@7/swiper-bundle.min.css" />
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css">
+    <link rel="stylesheet" href="css/style.css">
+    <script src="https://cdn.jsdelivr.net/particles.js/2.0.0/particles.min.js"></script>
+    <!-- Cảnh báo sức khỏe -->
+    <style>
+        .health-warning {
+            background-color: #5c0000;
+            color: white;
+            padding: 10px;
+            text-align: center;
+            font-weight: bold;
+            position: fixed;
+            bottom: 0;
+            width: 100%;
+            z-index: 1000;
+        }
+    </style>
+</head>
+<body>
+<div id="particles-js"></div>
+<!-- Cảnh báo sức khỏe -->
+<div class="health-warning">
+    <p>HÚT THUỐC LÁ CÓ HẠI CHO SỨC KHỎE. CHỈ DÀNH CHO NGƯỜI TRÊN 18 TUỔI.</p>
+</div>
+
+<!-- header section starts  -->
+<header class="header">
+    <a href="#" class="logo"> <i class="fas fa-smoking"></i> Premium Tobacco </a>
+
+    <nav class="navbar">
+        <a href="#home" class="active">Trang chủ</a>
+        <a href="#products">Sản phẩm</a>
+        <a href="#about">Về chúng tôi</a>
+        <a href="#arrivals">Hàng mới về</a>
+        <a href="#contact">Liên hệ</a>
+        <a href="#blogs">Tin tức</a>
+        <a href="#reviews">Đánh giá</a>
+    </nav>
+
+    <div class="icons">
+        <div id="menu-btn" class="fas fa-bars"></div>
+        <div id="search-btn" class="fas fa-search"></div>
+        <a href="#" class="fas fa-shopping-cart"></a>
+        <a href="#" class="fas fa-user"></a>
+    </div>
+
+    <form action="" class="search-form">
+        <input type="search" placeholder="Tìm kiếm sản phẩm..." id="input-box">
+        <label for="input-box" class="fas fa-search"></label>
+    </form>
+</header>
+
+<!-- home section starts  -->
+<section class="home" id="home">
+    <div class="swiper home-slider">
+        <div class="swiper-wrapper">
+            <div class="swiper-slide box" style="background: url(image/tobacco-slider-1.jpg);">
+                <div class="content">
+                    <h3>Thuốc lá nhập khẩu cao cấp</h3>
+                    <p>Chất lượng đẳng cấp thế giới</p>
+                    <div class="button">
+                        <a href="#" class="btn">Mua ngay</a>
+                    </div>
+                </div>
+            </div>
+
+            <div class="swiper-slide box" style="background: url(image/tobacco-slider-2.jpg);">
+                <div class="content">
+                    <h3>Giảm giá lên đến 30%</h3>
+                    <p>Cho các dòng sản phẩm cao cấp</p>
+                    <div class="button">
+                        <a href="#" class="btn">Mua ngay</a>
+                    </div>
+                </div>
+            </div>
+
+            <div class="swiper-slide box" style="background: url(image/tobacco-slider-3.jpg);">
+                <div class="content">
+                    <h3>Bộ sưu tập Limited Edition</h3>
+                    <p>Đừng bỏ lỡ cơ hội sở hữu</p>
+                    <div class="button">
+                        <a href="#" class="btn">Mua ngay</a>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <div class="swiper-button-next"></div>
+        <div class="swiper-button-prev"></div>
+    </div>
+</section>
+
+<!-- products section starts  -->
+<section class="products" id="products">
+    <h1 class="heading"> Sản phẩm <span>nổi bật</span> </h1>
+
+    <div class="swiper products-slider" data-aos="zoom-in">
+        <div class="swiper-wrapper">
+            <div class="swiper-slide box">
+                <div class="icons">
+                    <a href="#" class="fas fa-shopping-cart"></a>
+                    <a href="#" class="fas fa-eye"></a>
+                    <a href="#" class="fas fa-share"></a>
+                </div>
+                <div class="image">
+                    <img src="image/product-1.jpg" alt="Marlboro Red">
+                </div>
+                <div class="content">
+                    <h3>Marlboro Red</h3>
+                    <div class="price"> 120.000đ <span>150.000đ</span> </div>
+                </div>
+            </div>
+
+            <div class="swiper-slide box">
+                <div class="icons">
+                    <a href="#" class="fas fa-shopping-cart"></a>
+                    <a href="#" class="fas fa-eye"></a>
+                    <a href="#" class="fas fa-share"></a>
+                </div>
+                <div class="image">
+                    <img src="image/product-2.jpg" alt="Davidoff Classic">
+                </div>
+                <div class="content">
+                    <h3>Davidoff Classic</h3>
+                    <div class="price"> 180.000đ <span>200.000đ</span> </div>
+                </div>
+            </div>
+
+            <div class="swiper-slide box">
+                <div class="icons">
+                    <a href="#" class="fas fa-shopping-cart"></a>
+                    <a href="#" class="fas fa-eye"></a>
+                    <a href="#" class="fas fa-share"></a>
+                </div>
+                <div class="image">
+                    <img src="image/product-3.jpg" alt="Camel Yellow">
+                </div>
+                <div class="content">
+                    <h3>Camel Yellow</h3>
+                    <div class="price"> 110.000đ <span>130.000đ</span> </div>
+                </div>
+            </div>
+
+            <div class="swiper-slide box">
+                <div class="icons">
+                    <a href="#" class="fas fa-shopping-cart"></a>
+                    <a href="#" class="fas fa-eye"></a>
+                    <a href="#" class="fas fa-share"></a>
+                </div>
+                <div class="image">
+                    <img src="image/product-4.jpg" alt="Winston Xstyle">
+                </div>
+                <div class="content">
+                    <h3>Winston Xstyle</h3>
+                    <div class="price"> 100.000đ <span>120.000đ</span> </div>
+                </div>
+            </div>
+
+            <div class="swiper-slide box">
+                <div class="icons">
+                    <a href="#" class="fas fa-shopping-cart"></a>
+                    <a href="#" class="fas fa-eye"></a>
+                    <a href="#" class="fas fa-share"></a>
+                </div>
+                <div class="image">
+                    <img src="image/product-5.jpg" alt="Parliament Night Blue">
+                </div>
+                <div class="content">
+                    <h3>Parliament Night Blue</h3>
+                    <div class="price"> 150.000đ <span>170.000đ</span> </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</section>
+
+<!-- about section starts  -->
+<section class="about" id="about">
+    <div class="content" data-aos="fade-right">
+        <h3>Về chúng tôi</h3>
+        <p>Premium Tobacco là cửa hàng chuyên cung cấp các sản phẩm thuốc lá nhập khẩu chính hãng từ các thương hiệu nổi tiếng thế giới. Với hơn 10 năm kinh nghiệm trong ngành, chúng tôi cam kết mang đến cho khách hàng những sản phẩm chất lượng cao với giá cả hợp lý nhất.</p>
+        <a href="#" class="btn">Xem thêm</a>
+    </div>
+</section>
+
+<!-- arrivals section starts  -->
+<section class="arrivals" id="arrivals">
+    <h1 class="heading"> Sản phẩm <span>mới về</span> </h1>
+
+    <div class="box-container">
+        <div class="box" data-aos="fade-right">
+            <div class="icons">
+                <a href="#" class="fas fa-shopping-cart"></a>
+                <a href="#" class="fas fa-eye"></a>
+                <a href="#" class="fas fa-share"></a>
+            </div>
+            <div class="image">
+                <img src="image/arrival-1.jpg" alt="Marlboro Gold">
+            </div>
+            <div class="content">
+                <h3>Marlboro Gold</h3>
+                <div class="price"> 125.000đ <span>140.000đ</span> </div>
+            </div>
+        </div>
+
+        <div class="box" data-aos="fade-down">
+            <div class="icons">
+                <a href="#" class="fas fa-shopping-cart"></a>
+                <a href="#" class="fas fa-eye"></a>
+                <a href="#" class="fas fa-share"></a>
+            </div>
+            <div class="image">
+                <img src="image/arrival-2.jpg" alt="Dunhill Fine Cut">
+            </div>
+            <div class="content">
+                <h3>Dunhill Fine Cut</h3>
+                <div class="price"> 160.000đ <span>180.000đ</span> </div>
+            </div>
+        </div>
+
+        <div class="box" data-aos="fade-left">
+            <div class="icons">
+                <a href="#" class="fas fa-shopping-cart"></a>
+                <a href="#" class="fas fa-eye"></a>
+                <a href="#" class="fas fa-share"></a>
+            </div>
+            <div class="image">
+                <img src="image/arrival-3.jpg" alt="Lucky Strike Original">
+            </div>
+            <div class="content">
+                <h3>Lucky Strike Original</h3>
+                <div class="price"> 135.000đ <span>150.000đ</span> </div>
+            </div>
+        </div>
+
+        <div class="box" data-aos="fade-right">
+            <div class="icons">
+                <a href="#" class="fas fa-shopping-cart"></a>
+                <a href="#" class="fas fa-eye"></a>
+                <a href="#" class="fas fa-share"></a>
+            </div>
+            <div class="image">
+                <img src="image/arrival-4.jpg" alt="Kent Nanotek">
+            </div>
+            <div class="content">
+                <h3>Kent Nanotek</h3>
+                <div class="price"> 140.000đ <span>160.000đ</span> </div>
+            </div>
+        </div>
+
+        <div class="box" data-aos="fade-down">
+            <div class="icons">
+                <a href="#" class="fas fa-shopping-cart"></a>
+                <a href="#" class="fas fa-eye"></a>
+                <a href="#" class="fas fa-share"></a>
+            </div>
+            <div class="image">
+                <img src="image/arrival-5.jpg" alt="Pall Mall Blue">
+            </div>
+            <div class="content">
+                <h3>Pall Mall Blue</h3>
+                <div class="price"> 95.000đ <span>110.000đ</span> </div>
+            </div>
+        </div>
+
+        <div class="box" data-aos="fade-left">
+            <div class="icons">
+                <a href="#" class="fas fa-shopping-cart"></a>
+                <a href="#" class="fas fa-eye"></a>
+                <a href="#" class="fas fa-share"></a>
+            </div>
+            <div class="image">
+                <img src="image/arrival-6.jpg" alt="Benson & Hedges Gold">
+            </div>
+            <div class="content">
+                <h3>Benson & Hedges Gold</h3>
+                <div class="price"> 170.000đ <span>190.000đ</span> </div>
+            </div>
+        </div>
+    </div>
+</section>
+
+<!-- contact section starts  -->
+<section class="contact" id="contact">
+    <h1 class="heading"> <span>Liên hệ</span> với chúng tôi </h1>
+
+    <div class="row">
+        <iframe class="map" src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3919.319347679728!2d106.6808563152608!3d10.78684089231477!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x31752f3a7c1d6d6d%3A0x5a7f5a1a3b5b5b5b!2sPremium%20Tobacco%20Shop!5e0!3m2!1sen!2s!4v1620000000000!5m2!1sen!2s" allowfullscreen="" loading="lazy"></iframe>
+
+        <form action="">
+            <h3 data-aos="zoom-in">Gửi thông tin cho chúng tôi</h3>
+            <input data-aos="zoom-in" type="text" placeholder="Họ và tên" class="box">
+            <input data-aos="zoom-in" type="email" placeholder="Email" class="box">
+            <input data-aos="zoom-in" type="number" placeholder="Số điện thoại" class="box">
+            <textarea data-aos="zoom-in" placeholder="Nội dung" class="box" cols="30" rows="10"></textarea>
+            <input data-aos="zoom-in" type="submit" value="Gửi tin nhắn" class="btn">
+        </form>
+    </div>
+</section>
+
+<!-- blogs section starts  -->
+<section class="blogs" id="blogs">
+    <h1 class="heading"> Tin tức <span>mới nhất</span> </h1>
+
+    <div class="box-container">
+        <div class="box" data-aos="fade-right">
+            <div class="image">
+                <img src="image/blog-1.jpg" alt="Thuốc lá mới">
+            </div>
+            <div class="content">
+                <h3>Xu hướng thuốc lá thế hệ mới năm 2023</h3>
+                <p>Cùng khám phá những dòng sản phẩm thuốc lá thế hệ mới đang làm mưa làm gió trên thị trường quốc tế.</p>
+                <a href="#" class="btn">Đọc thêm</a>
+                <div class="icons">
+                    <a href="#"> <i class="fas fa-calendar"></i> 15/10/2023 </a>
+                    <a href="#"> <i class="fas fa-user"></i> bởi admin </a>
+                </div>
+            </div>
+        </div>
+
+        <div class="box" data-aos="fade-down">
+            <div class="image">
+                <img src="image/blog-2.jpg" alt="Bảo quản thuốc lá">
+            </div>
+            <div class="content">
+                <h3>Cách bảo quản thuốc lá đúng cách</h3>
+                <p>Hướng dẫn chi tiết cách bảo quản thuốc lá để giữ nguyên hương vị và chất lượng sản phẩm.</p>
+                <a href="#" class="btn">Đọc thêm</a>
+                <div class="icons">
+                    <a href="#"> <i class="fas fa-calendar"></i> 10/10/2023 </a>
+                    <a href="#"> <i class="fas fa-user"></i> bởi admin </a>
+                </div>
+            </div>
+        </div>
+
+        <div class="box" data-aos="fade-left">
+            <div class="image">
+                <img src="image/blog-3.jpg" alt="Lịch sử thuốc lá">
+            </div>
+            <div class="content">
+                <h3>Lịch sử phát triển của ngành thuốc lá</h3>
+                <p>Hành trình từ những điếu thuốc lá đầu tiên đến các sản phẩm hiện đại ngày nay.</p>
+                <a href="#" class="btn">Đọc thêm</a>
+                <div class="icons">
+                    <a href="#"> <i class="fas fa-calendar"></i> 5/10/2023 </a>
+                    <a href="#"> <i class="fas fa-user"></i> bởi admin </a>
+                </div>
+            </div>
+        </div>
+    </div>
+</section>
+<section class="reviews" id="reviews">
+    <h1 class="heading"> Đánh giá <span>về chúng tôi</span> </h1>
+    
+    <div class="swiper reviews-slider" data-aos="zoom-in">
+        <div class="swiper-wrapper">
+            <!-- Đánh giá 1 -->
+            <div class="swiper-slide box">
+                <div class="stars">
+                    <i class="fas fa-star"></i>
+                    <i class="fas fa-star"></i>
+                    <i class="fas fa-star"></i>
+                    <i class="fas fa-star"></i>
+                    <i class="fas fa-star"></i>
+                </div>
+                <p>"Sản phẩm chất lượng cao, đóng gói cẩn thận. Giao hàng nhanh chóng. Tôi đặc biệt ấn tượng với dòng thuốc lá nhập khẩu của cửa hàng!"</p>
+                <div class="user">
+                    <img src="image/review-1.jpg" alt="Khách hàng 1">
+                    <div class="user-info">
+                        <h3>Nguyễn Văn An</h3>
+                        <span>Khách hàng thân thiết</span>
+                    </div>
+                </div>
+            </div>
+            
+            <!-- Đánh giá 2 -->
+            <div class="swiper-slide box">
+                <div class="stars">
+                    <i class="fas fa-star"></i>
+                    <i class="fas fa-star"></i>
+                    <i class="fas fa-star"></i>
+                    <i class="fas fa-star"></i>
+                    <i class="fas fa-star-half-alt"></i>
+                </div>
+                <p>"Nhân viên tư vấn rất nhiệt tình và am hiểu sản phẩm. Tôi tìm được đúng loại thuốc lá mình yêu thích sau khi được tư vấn."</p>
+                <div class="user">
+                    <img src="image/review-2.jpg" alt="Khách hàng 2">
+                    <div class="user-info">
+                        <h3>Trần Thị Bình</h3>
+                        <span>Khách hàng mới</span>
+                    </div>
+                </div>
+            </div>
+            
+            <!-- Đánh giá 3 -->
+            <div class="swiper-slide box">
+                <div class="stars">
+                    <i class="fas fa-star"></i>
+                    <i class="fas fa-star"></i>
+                    <i class="fas fa-star"></i>
+                    <i class="fas fa-star"></i>
+                    <i class="fas fa-star"></i>
+                </div>
+                <p>"Luôn là địa chỉ tin cậy của tôi khi cần mua thuốc lá nhập khẩu. Giá cả hợp lý, chất lượng đảm bảo 100% chính hãng."</p>
+                <div class="user">
+                    <img src="image/review-3.jpg" alt="Khách hàng 3">
+                    <div class="user-info">
+                        <h3>Lê Hoàng Công</h3>
+                        <span>Khách hàng 2 năm</span>
+                    </div>
+                </div>
+            </div>
+            
+            <!-- Đánh giá 4 -->
+            <div class="swiper-slide box">
+                <div class="stars">
+                    <i class="fas fa-star"></i>
+                    <i class="fas fa-star"></i>
+                    <i class="fas fa-star"></i>
+                    <i class="fas fa-star"></i>
+                    <i class="far fa-star"></i>
+                </div>
+                <p>"Đa dạng sản phẩm, thường xuyên có hàng mới. Mong cửa hàng có thêm nhiều chương trình khuyến mãi hơn nữa!"</p>
+                <div class="user">
+                    <img src="image/review-4.jpg" alt="Khách hàng 4">
+                    <div class="user-info">
+                        <h3>Phạm Duy Dương</h3>
+                        <span>Khách hàng tiềm năng</span>
+                    </div>
+                </div>
+            </div>
+        </div>
+        
+        <div class="swiper-pagination"></div>
+    </div>
+</section>
+
+<div class="review-form" data-aos="fade-up">
+    <h3>Gửi đánh giá của bạn</h3>
+    <form action="" method="POST">
+        <div class="inputBox">
+            <input type="text" placeholder="Họ và tên" required>
+            <input type="email" placeholder="Email" required>
+        </div>
+        <div class="rating">
+            <span>Đánh giá: </span>
+            <select name="rating" required>
+                <option value="">-- Chọn số sao --</option>
+                <option value="5">★★★★★ (5 sao)</option>
+                <option value="4">★★★★☆ (4 sao)</option>
+                <option value="3">★★★☆☆ (3 sao)</option>
+                <option value="2">★★☆☆☆ (2 sao)</option>
+                <option value="1">★☆☆☆☆ (1 sao)</option>
+            </select>
+        </div>
+        <textarea name="review" placeholder="Nội dung đánh giá của bạn..." required></textarea>
+        <input type="submit" value="Gửi đánh giá" class="btn">
+    </form>
+</div>
+<!-- footer section starts  -->
+<section class="footer" id="footer">
+    <div class="box-container">
+        <div class="box" data-aos="fade-right">
+            <h3>Chi nhánh</h3>
+            <a href="#"> <i class="fas fa-map-marker-alt"></i> Hà Nội </a>
+            <a href="#"> <i class="fas fa-map-marker-alt"></i> TP.HCM </a>
+            <a href="#"> <i class="fas fa-map-marker-alt"></i> Đà Nẵng </a>
+            <a href="#"> <i class="fas fa-map-marker-alt"></i> Hải Phòng </a>
+            <a href="#"> <i class="fas fa-map-marker-alt"></i> Cần Thơ </a>
+        </div>
+
+        <div class="box" data-aos="fade-down">
+            <h3>Liên kết nhanh</h3>
+            <a href="#"> <i class="fas fa-arrow-right"></i> Trang chủ </a>
+            <a href="#"> <i class="fas fa-arrow-right"></i> Sản phẩm </a>
+            <a href="#"> <i class="fas fa-arrow-right"></i> Về chúng tôi </a>
+            <a href="#"> <i class="fas fa-arrow-right"></i> Hàng mới về </a>
+            <a href="#"> <i class="fas fa-arrow-right"></i> Liên hệ </a>
+            <a href="#"> <i class="fas fa-arrow-right"></i> Tin tức </a>
+        </div>
+
+        <div class="box" data-aos="fade-up">
+            <h3>Thông tin liên hệ</h3>
+            <a href="#"> <i class="fas fa-phone"></i> +84 123 456 789 </a>
+            <a href="#"> <i class="fas fa-phone"></i> +84 987 654 321 </a>
+            <a href="#"> <i class="fas fa-envelope"></i> premiumtobacco@gmail.com </a>
+            <a href="#"> <i class="fas fa-map-marker-alt"></i> 123 HaNoi </a>
+        </div>
+
+        <div class="box" data-aos="fade-left">
+            <h3>Theo dõi chúng tôi</h3>
+            <a href="#"> <i class="fab fa-facebook-f"></i> facebook </a>
+            <a href="#"> <i class="fab fa-twitter"></i> twitter </a>
+            <a href="#"> <i class="fab fa-instagram"></i> instagram </a>
+            <a href="#"> <i class="fab fa-linkedin"></i> linkedin </a>
+            <a href="#"> <i class="fab fa-youtube"></i> youtube </a>
+        </div>
+    </div>
+
+    <div class="credit"> © 2023 <span>Premium Tobacco</span> | Bản quyền thuộc về chúng tôi </div>
+</section>
+
+<script src="https://unpkg.com/swiper@7/swiper-bundle.min.js"></script>
+<script src="js/script.js"></script>
+<script src="https://unpkg.com/aos@next/dist/aos.js"></script>
+<script>
+  AOS.init({
+      delay:400,
+      duration:800
+  });
+</script>
+
+<!-- Age verification modal -->
+<div id="ageVerification" style="display:none; position:fixed; top:0; left:0; width:100%; height:100%; background:rgba(0,0,0,0.9); z-index:9999; color:white; text-align:center; padding-top:20%;">
+    <h2>XÁC NHẬN TUỔI</h2>
+    <p>Trang web này chỉ dành cho người từ 18 tuổi trở lên</p>
+    <p>Bạn có đủ 18 tuổi chưa?</p>
+    <button onclick="verifyAge(true)" style="padding:10px 20px; margin:10px; background:green; color:white; border:none;">Có, tôi đã đủ 18 tuổi</button>
+    <button onclick="verifyAge(false)" style="padding:10px 20px; margin:10px; background:red; color:white; border:none;">Không, tôi chưa đủ 18 tuổi</button>
+</div>
+
+<script>
+// Age verification
+document.addEventListener('DOMContentLoaded', function() {
+    if(localStorage.getItem('ageVerified') !== 'true') {
+        document.getElementById('ageVerification').style.display = 'block';
+    }
+});
+
+function verifyAge(isAdult) {
+    if(isAdult) {
+        localStorage.setItem('ageVerified', 'true');
+        document.getElementById('ageVerification').style.display = 'none';
+    } else {
+        window.location.href = 'https://www.google.com';
+    }
+}
+</script>
+<!-- Thêm vào cuối file HTML, trước thẻ đóng </body> -->
+<script>
+    document.addEventListener('DOMContentLoaded', function() {
+      particlesJS('particles-js', {
+        "particles": {
+          "number": {
+            "value": 10,
+            "density": {
+              "enable": true,
+              "value_area": 800
+            }
+          },
+          "color": {
+            "value": ["#e0e0e0", "#d0d0d0", "#c0c0c0"] // Màu sắc phù hợp theme thuốc lá
+          },
+          "shape": {
+            "type": ["circle", "triangle", "polygon"], // Đa dạng hình dạng
+            "stroke": {
+              "width": 0,
+              "color": "#000000"
+            },
+            "polygon": {
+              "nb_sides": 5
+            }
+          },
+          "opacity": {
+            "value": 0.7,
+            "random": true,
+            "anim": {
+              "enable": true,
+              "speed": 0.5,
+              "opacity_min": 0.1,
+              "sync": false
+            }
+          },
+          "size": {
+            "value": 4,
+            "random": true,
+            "anim": {
+              "enable": true,
+              "speed": 2,
+              "size_min": 0.3,
+              "sync": false
+            }
+          },
+          "line_linked": {
+            "enable": true,
+            "distance": 120,
+            "color": "#ff9900", // Màu cam nhạt
+            "opacity": 0.4,
+            "width": 1
+          },
+          "move": {
+            "enable": true,
+            "speed": 3,
+            "direction": "none",
+            "random": true,
+            "straight": false,
+            "out_mode": "bounce", // Nảy khi chạm biên
+            "bounce": true,
+            "attract": {
+              "enable": true, // Bật hút hạt khi di chuột
+              "rotateX": 600,
+              "rotateY": 1200
+            }
+          }
+        },
+        "interactivity": {
+          "detect_on": "canvas",
+          "events": {
+            "onhover": {
+              "enable": true,
+              "mode": "grab" // Chế độ "grab" mạnh hơn
+            },
+            "onclick": {
+              "enable": true,
+              "mode": "bubble" // Tạo bong bóng khi click
+            },
+            "resize": true
+          },
+          
+          "modes": {
+            "grab": {
+                "distance": 200,
+                "line_linked": {
+                "opacity": 1
+                }
+            },
+            "bubble": {
+              "distance": 250,
+              "size": 10, // Kích thước bong bóng lớn hơn
+              "duration": 2,
+              "opacity": 0.8,
+              "speed": 3
+            },
+            "repulse": {
+              "distance": 120, // Đẩy xa hơn
+              "duration": 0.8
+            },
+            "push": {
+              "particles_nb": 8 // Đẩy nhiều hạt hơn
+            },
+            "remove": {
+              "particles_nb": 4
+            }
+          }
+        },
+        "retina_detect": true
+      });
+    });
+    </script>
+</body>
+</html>
