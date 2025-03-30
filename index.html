@@ -25,6 +25,41 @@
             z-index: 1000;
         }
     </style>
+    <style>
+        /* Nút đặt hàng trong header */
+        .header .order-now-btn {
+            margin-left: 2rem;
+            padding: 0.8rem 2rem;
+            background: #e67e22;
+            color: #fff;
+            border-radius: 5px;
+            font-weight: bold;
+            transition: all 0.3s ease;
+            border: none;
+            cursor: pointer;
+            font-size: 1.4rem;
+        }
+        
+        .header .order-now-btn:hover {
+            background: #d35400;
+            transform: translateY(-3px);
+            box-shadow: 0 5px 15px rgba(0,0,0,0.1);
+        }
+        
+        /* Responsive cho nút đặt hàng */
+        @media (max-width: 991px) {
+            .header .order-now-btn {
+                display: none; /* Ẩn trên mobile */
+            }
+        }
+        
+        /* Thêm khoảng cách cho các icon bên phải */
+        .header .icons {
+            margin-left: auto;
+            display: flex;
+            align-items: center;
+        }
+    </style>
 </head>
 <body>
 <div id="particles-js"></div>
@@ -45,13 +80,18 @@
         <a href="#contact">Liên hệ</a>
         <a href="#blogs">Tin tức</a>
         <a href="#reviews">Đánh giá</a>
+        <button class="order-now-btn" id="headerOrderButton">
+            <i class="fas fa-bolt cart-icon"></i>
+            <span>ĐẶT HÀNG NGAY</span>
+        </button>
     </nav>
 
     <div class="icons">
         <div id="menu-btn" class="fas fa-bars"></div>
         <div id="search-btn" class="fas fa-search"></div>
-        <a href="#" class="fas fa-shopping-cart"></a>
-        <a href="#" class="fas fa-user"></a>
+        <a href="#" class="fas fa-shopping-cart" id="cartIcon">
+            <span class="cart-count" id="cartCount">0</span>
+        </a>
     </div>
 
     <form action="" class="search-form">
@@ -59,7 +99,6 @@
         <label for="input-box" class="fas fa-search"></label>
     </form>
 </header>
-
 <!-- home section starts  -->
 <section class="home" id="home">
     <div class="swiper home-slider">
@@ -69,7 +108,7 @@
                     <h3>Thuốc lá nhập khẩu cao cấp</h3>
                     <p>Chất lượng đẳng cấp thế giới</p>
                     <div class="button">
-                        <a href="#" class="btn">Mua ngay</a>
+                        <a href="#arrivals" class="btn">Mua ngay</a>
                     </div>
                 </div>
             </div>
@@ -79,7 +118,7 @@
                     <h3>Giảm giá lên đến 30%</h3>
                     <p>Cho các dòng sản phẩm cao cấp</p>
                     <div class="button">
-                        <a href="#" class="btn">Mua ngay</a>
+                        <a href="#arrivals" class="btn">Mua ngay</a>
                     </div>
                 </div>
             </div>
@@ -89,7 +128,7 @@
                     <h3>Bộ sưu tập Limited Edition</h3>
                     <p>Đừng bỏ lỡ cơ hội sở hữu</p>
                     <div class="button">
-                        <a href="#" class="btn">Mua ngay</a>
+                        <a href="#arrivals" class="btn">Mua ngay</a>
                     </div>
                 </div>
             </div>
@@ -106,10 +145,10 @@
 
     <div class="swiper products-slider" data-aos="zoom-in">
         <div class="swiper-wrapper">
-            <div class="swiper-slide box">
+            <div class="swiper-slide box" data-id="marlboro-red">
                 <div class="icons">
                     <a href="#" class="fas fa-shopping-cart"></a>
-                    <a href="#" class="fas fa-eye"></a>
+                    <a href="#products" class="fas fa-eye view-detail"></a>
                     <a href="#" class="fas fa-share"></a>
                 </div>
                 <div class="image">
@@ -121,10 +160,10 @@
                 </div>
             </div>
 
-            <div class="swiper-slide box">
+            <div class="swiper-slide box" data-id="marlboro-red">
                 <div class="icons">
                     <a href="#" class="fas fa-shopping-cart"></a>
-                    <a href="#" class="fas fa-eye"></a>
+                    <a href="#products" class="fas fa-eye view-detail"></a>
                     <a href="#" class="fas fa-share"></a>
                 </div>
                 <div class="image">
@@ -136,10 +175,10 @@
                 </div>
             </div>
 
-            <div class="swiper-slide box">
+            <div class="swiper-slide box" data-id="marlboro-red">
                 <div class="icons">
                     <a href="#" class="fas fa-shopping-cart"></a>
-                    <a href="#" class="fas fa-eye"></a>
+                    <a href="#products" class="fas fa-eye view-detail"></a>
                     <a href="#" class="fas fa-share"></a>
                 </div>
                 <div class="image">
@@ -151,10 +190,10 @@
                 </div>
             </div>
 
-            <div class="swiper-slide box">
+            <div class="swiper-slide box" data-id="marlboro-red">
                 <div class="icons">
                     <a href="#" class="fas fa-shopping-cart"></a>
-                    <a href="#" class="fas fa-eye"></a>
+                    <a href="#products" class="fas fa-eye view-detail"></a>
                     <a href="#" class="fas fa-share"></a>
                 </div>
                 <div class="image">
@@ -166,10 +205,10 @@
                 </div>
             </div>
 
-            <div class="swiper-slide box">
+            <div class="swiper-slide box" data-id="marlboro-red">
                 <div class="icons">
                     <a href="#" class="fas fa-shopping-cart"></a>
-                    <a href="#" class="fas fa-eye"></a>
+                    <a href="#products" class="fas fa-eye view-detail"></a>
                     <a href="#" class="fas fa-share"></a>
                 </div>
                 <div class="image">
@@ -201,7 +240,7 @@
         <div class="box" data-aos="fade-right">
             <div class="icons">
                 <a href="#" class="fas fa-shopping-cart"></a>
-                <a href="#" class="fas fa-eye"></a>
+                <a href="#arrivals" class="fas fa-eye view-detail"></a>
                 <a href="#" class="fas fa-share"></a>
             </div>
             <div class="image">
@@ -216,7 +255,7 @@
         <div class="box" data-aos="fade-down">
             <div class="icons">
                 <a href="#" class="fas fa-shopping-cart"></a>
-                <a href="#" class="fas fa-eye"></a>
+                <a href="#arrivals" class="fas fa-eye view-detail"></a>
                 <a href="#" class="fas fa-share"></a>
             </div>
             <div class="image">
@@ -231,7 +270,7 @@
         <div class="box" data-aos="fade-left">
             <div class="icons">
                 <a href="#" class="fas fa-shopping-cart"></a>
-                <a href="#" class="fas fa-eye"></a>
+                <a href="#arrivals" class="fas fa-eye view-detail"></a>
                 <a href="#" class="fas fa-share"></a>
             </div>
             <div class="image">
@@ -246,7 +285,7 @@
         <div class="box" data-aos="fade-right">
             <div class="icons">
                 <a href="#" class="fas fa-shopping-cart"></a>
-                <a href="#" class="fas fa-eye"></a>
+                <a href="#arrivals" class="fas fa-eye view-detail"></a>
                 <a href="#" class="fas fa-share"></a>
             </div>
             <div class="image">
@@ -261,7 +300,7 @@
         <div class="box" data-aos="fade-down">
             <div class="icons">
                 <a href="#" class="fas fa-shopping-cart"></a>
-                <a href="#" class="fas fa-eye"></a>
+                <a href="#arrivals" class="fas fa-eye view-detail"></a>
                 <a href="#" class="fas fa-share"></a>
             </div>
             <div class="image">
@@ -276,7 +315,7 @@
         <div class="box" data-aos="fade-left">
             <div class="icons">
                 <a href="#" class="fas fa-shopping-cart"></a>
-                <a href="#" class="fas fa-eye"></a>
+                <a href="#arrivals" class="fas fa-eye view-detail"></a>
                 <a href="#" class="fas fa-share"></a>
             </div>
             <div class="image">
@@ -507,7 +546,7 @@
         </div>
     </div>
 
-    <div class="credit"> © 2023 <span>Premium Tobacco</span> | Bản quyền thuộc về chúng tôi </div>
+    <div class="credit"> © 2025 <span>Premium Tobacco</span> | Bản quyền thuộc về chúng tôi </div>
 </section>
 
 <script src="https://unpkg.com/swiper@7/swiper-bundle.min.js"></script>
@@ -519,7 +558,67 @@
       duration:800
   });
 </script>
+<!-- Nút đặt hàng nổi -->
+<div class="order-btn" id="orderButton">
+    <i class="fas fa-shopping-cart"></i>
+</div>
 
+<!-- Form đặt hàng popup -->
+<div class="order-overlay" id="orderOverlay">
+    <div class="order-form">
+        <span class="close-order-form" id="closeOrderForm">&times;</span>
+        <h3>ĐẶT HÀNG</h3>
+        
+        <form id="orderForm">
+            <div class="input-group">
+                <label for="fullName">Họ và tên</label>
+                <input type="text" id="fullName" placeholder="Nhập họ tên đầy đủ" required>
+            </div>
+            
+            <div class="input-group">
+                <label for="phone">Số điện thoại</label>
+                <input type="tel" id="phone" placeholder="Nhập số điện thoại" required>
+            </div>
+            
+            <div class="input-group">
+                <label for="email">Email</label>
+                <input type="email" id="email" placeholder="Nhập email của bạn" required>
+            </div>
+
+            <!-- Thêm ô địa chỉ mới -->
+            <div class="input-group">
+                <label for="address">Địa chỉ nhận hàng</label>
+                <input type="text" id="address" placeholder="Nhập địa chỉ đầy đủ (số nhà, đường, phường/xã, quận/huyện, tỉnh/thành phố)" required>
+            </div>
+            
+            <div class="input-group">
+                <label for="product">Sản phẩm</label>
+                <select id="product" required>
+                    <option value="" disabled selected>-- Chọn sản phẩm --</option>
+                    <option value="Marlboro Red">Marlboro Red - 120.000đ</option>
+                    <option value="Davidoff Classic">Davidoff Classic - 180.000đ</option>
+                    <option value="Camel Yellow">Camel Yellow - 110.000đ</option>
+                    <option value="Winston Xstyle">Winston Xstyle - 100.000đ</option>
+                    <option value="Parliament Night Blue">Parliament Night Blue - 150.000đ</option>
+                </select>
+            </div>
+            
+            <div class="input-group">
+                <label for="quantity">Số lượng</label>
+                <input type="number" id="quantity" min="1" value="1" required>
+            </div>
+            
+            <div class="input-group">
+                <label for="note">Ghi chú</label>
+                <textarea id="note" rows="3" placeholder="Yêu cầu đặc biệt (nếu có)"></textarea>
+            </div>
+            
+            <button type="submit" class="btn-submit">
+                <i class="fas fa-paper-plane"></i> XÁC NHẬN ĐẶT HÀNG
+            </button>
+        </form>
+    </div>
+</div>
 <!-- Age verification modal -->
 <div id="ageVerification" style="display:none; position:fixed; top:0; left:0; width:100%; height:100%; background:rgba(0,0,0,0.9); z-index:9999; color:white; text-align:center; padding-top:20%;">
     <h2>XÁC NHẬN TUỔI</h2>
@@ -528,7 +627,67 @@
     <button onclick="verifyAge(true)" style="padding:10px 20px; margin:10px; background:green; color:white; border:none;">Có, tôi đã đủ 18 tuổi</button>
     <button onclick="verifyAge(false)" style="padding:10px 20px; margin:10px; background:red; color:white; border:none;">Không, tôi chưa đủ 18 tuổi</button>
 </div>
+<div class="product-popup" id="productPopup">
+    <div class="product-popup-content">
+        <span class="product-popup-close" id="closeProductPopup">&times;</span>
+        
+        <div class="product-popup-image" id="popupProductImage" 
+             style="background-image: url('image/product-1.jpg')">
+        </div>
+        
+        <div class="product-popup-info">
+            <h2 id="popupProductName">Marlboro Red</h2>
+            
+            <div class="product-price">
+                <span id="popupProductPrice">120.000đ</span>
+                <span id="popupProductOldPrice">150.000đ</span>
+            </div>
+            
+            <p class="product-description">
+                Thuốc lá Marlboro Red với hương vị đậm đà truyền thống, 
+                được ưa chuộng trên toàn thế giới. Sản phẩm nhập khẩu 
+                chính hãng từ Mỹ, đảm bảo chất lượng cao cấp.
+            </p>
+            
+            <ul class="product-details">
+                <li><i class="fas fa-check"></i> Xuất xứ: Mỹ</li>
+                <li><i class="fas fa-check"></i> Đóng gói: 20 điếu/bao</li>
+                <li><i class="fas fa-check"></i> Hương vị: Đậm đà</li>
+                <li><i class="fas fa-check"></i> Tình trạng: Còn hàng</li>
+                <li><i class="fas fa-check"></i> Bảo hành: Đổi trả 1:1</li>
+            </ul>
+            
+            <div class="product-actions">
+                <button class="btn-add-to-cart">
+                    <i class="fas fa-shopping-cart"></i> Thêm vào giỏ
+                </button>
+                <button class="btn-wishlist" title="Thêm vào yêu thích">
+                    <i class="far fa-heart"></i>
+                </button>
+            </div>
+        </div>
+    </div>
+</div>
 
+<!-- Popup giỏ hàng -->
+<div class="cart-popup" id="cartPopup">
+    <div class="cart-header">
+        <span>Giỏ hàng của bạn</span>
+        <span id="cartItemCount">0 sản phẩm</span>
+    </div>
+    
+    <div class="cart-items" id="cartItems">
+        <div class="empty-cart">Giỏ hàng trống</div>
+    </div>
+    
+    <div class="cart-footer">
+        <div class="cart-total">
+            <span>Tổng cộng:</span>
+            <span id="cartPopupTotal">0đ</span>
+        </div>
+        <button class="btn-checkout" id="btnCheckout">ĐẶT HÀNG NGAY</button>
+    </div>
+</div>
 <script>
 // Age verification
 document.addEventListener('DOMContentLoaded', function() {
@@ -545,6 +704,81 @@ function verifyAge(isAdult) {
         window.location.href = 'https://www.google.com';
     }
 }
+</script>
+<script>
+    // Xử lý form đặt hàng
+    document.addEventListener('DOMContentLoaded', function() {
+        const orderButton = document.getElementById('orderButton');
+        const orderOverlay = document.getElementById('orderOverlay');
+        const closeOrderForm = document.getElementById('closeOrderForm');
+        const orderForm = document.getElementById('orderForm');
+        
+        // Mở form đặt hàng
+        orderButton.addEventListener('click', function() {
+            orderOverlay.style.display = 'flex';
+        });
+        
+        // Đóng form đặt hàng
+        closeOrderForm.addEventListener('click', function() {
+            orderOverlay.style.display = 'none';
+        });
+        
+        // Đóng khi click bên ngoài form
+        orderOverlay.addEventListener('click', function(e) {
+            if (e.target === orderOverlay) {
+                orderOverlay.style.display = 'none';
+            }
+        });
+        
+        // Xử lý submit form
+        orderForm.addEventListener('submit', function(e) {
+            e.preventDefault();
+            
+            // Lấy dữ liệu form
+            const formData = new FormData(orderForm);
+            const data = {};
+            formData.forEach((value, key) => {
+                data[key] = value;
+            });
+            
+            // Hiển thị thông báo đặt hàng thành công
+            alert(`Đặt hàng thành công!\n\nThông tin đơn hàng:\nHọ tên: ${data[0]}\nSĐT: ${data[1]}\nEmail: ${data[2]}\nSản phẩm: ${data['productSelect']}\nSố lượng: ${data[3]}\nGhi chú: ${data[4] || 'Không có'}`);
+            
+            // Reset form và đóng popup
+            orderForm.reset();
+            orderOverlay.style.display = 'none';
+            
+            // Có thể thêm code gửi dữ liệu đến server ở đây
+            // sendOrderToServer(data);
+        });
+        
+        // Thêm hiệu ứng khi di chuột vào nút đặt hàng
+        orderButton.addEventListener('mouseenter', function() {
+            this.style.animation = 'none';
+        });
+        
+        orderButton.addEventListener('mouseleave', function() {
+            this.style.animation = 'pulse 2s infinite';
+        });
+    });
+    
+    // Hàm gửi đơn hàng đến server (ví dụ)
+    function sendOrderToServer(data) {
+        fetch('/api/orders', {
+            method: 'POST',
+            headers: {
+                'Content-Type': 'application/json',
+            },
+            body: JSON.stringify(data),
+        })
+        .then(response => response.json())
+        .then(data => {
+            console.log('Success:', data);
+        })
+        .catch((error) => {
+            console.error('Error:', error);
+        });
+    }
 </script>
 <!-- Thêm vào cuối file HTML, trước thẻ đóng </body> -->
 <script>
@@ -657,5 +891,247 @@ function verifyAge(isAdult) {
       });
     });
     </script>
+
+<script>
+    // Mở form đặt hàng
+    function openOrderForm() {
+        const overlay = document.getElementById('orderOverlay');
+        overlay.style.display = 'flex';
+        
+        // Reset animation để có thể chạy lại
+        const form = overlay.querySelector('.order-form');
+        form.style.animation = 'none';
+        setTimeout(() => {
+            form.style.animation = '';
+        }, 10);
+    }
+    
+    // Đóng form đặt hàng
+    document.getElementById('closeOrderForm').addEventListener('click', function() {
+        document.getElementById('orderOverlay').style.display = 'none';
+    });
+    
+    // Đóng khi click bên ngoài form
+    document.getElementById('orderOverlay').addEventListener('click', function(e) {
+        if (e.target === this) {
+            this.style.display = 'none';
+        }
+    });
+    
+    // Xử lý submit form
+    document.getElementById('orderForm').addEventListener('submit', function(e) {
+        e.preventDefault();
+        
+        // Lấy dữ liệu form
+        const formData = {
+            name: document.getElementById('fullName').value,
+            phone: document.getElementById('phone').value,
+            email: document.getElementById('email').value,
+            address: document.getElementById('address').value,
+            product: document.getElementById('product').value,
+            quantity: document.getElementById('quantity').value,
+            note: document.getElementById('note').value
+        };
+        
+        // Hiệu ứng khi submit thành công
+        const submitBtn = document.querySelector('.btn-submit');
+        submitBtn.innerHTML = '<i class="fas fa-check"></i> ĐẶT HÀNG THÀNH CÔNG!';
+        submitBtn.style.background = 'linear-gradient(to right, #4CAF50, #2E7D32)';
+        
+        // Reset form sau 2 giây
+        setTimeout(() => {
+            this.reset();
+            submitBtn.innerHTML = '<i class="fas fa-paper-plane"></i> XÁC NHẬN ĐẶT HÀNG';
+            submitBtn.style.background = 'linear-gradient(to right, #ff8a00, #e52e71)';
+            document.getElementById('orderOverlay').style.display = 'none';
+            
+            // Hiển thị thông báo (có thể thay bằng modal đẹp hơn)
+            alert(`Đơn hàng của bạn đã được ghi nhận!\n\nSản phẩm: ${formData.product}\nSố lượng: ${formData.quantity}\nChúng tôi sẽ liên hệ lại trong ít phút.`);
+        }, 2000);
+        
+        // Gửi dữ liệu đến server (có thể thêm AJAX/Fetch ở đây)
+        // sendOrderToServer(formData);
+    });
+    
+    // Hiệu ứng khi input focus
+    document.querySelectorAll('.order-form input, .order-form select, .order-form textarea').forEach(input => {
+        input.addEventListener('focus', function() {
+            this.parentElement.style.transform = 'scale(1.02)';
+        });
+        
+        input.addEventListener('blur', function() {
+            this.parentElement.style.transform = 'scale(1)';
+        });
+    });
+</script>
+
+<script>
+    // Xử lý popup chi tiết sản phẩm
+    document.addEventListener('DOMContentLoaded', function() {
+        // Lấy tất cả các nút xem chi tiết
+        const viewButtons = document.querySelectorAll('.fa-eye');
+        const productPopup = document.getElementById('productPopup');
+        const closePopup = document.getElementById('closeProductPopup');
+        
+        // Gán sự kiện cho từng nút
+        viewButtons.forEach(button => {
+            button.addEventListener('click', function() {
+                // Lấy thông tin sản phẩm từ phần tử cha
+                const productBox = this.closest('.box');
+                const productName = productBox.querySelector('h3').textContent;
+                const productPrice = productBox.querySelector('.price').textContent;
+                const productImage = productBox.querySelector('img').src;
+                
+                // Cập nhật thông tin popup
+                document.getElementById('popupProductName').textContent = productName;
+                document.getElementById('popupProductPrice').textContent = productPrice.split(' ')[0];
+                document.getElementById('popupProductOldPrice').textContent = productPrice.split(' ')[1] || '';
+                document.getElementById('popupProductImage').style.backgroundImage = `url('${productImage}')`;
+                
+                // Hiển thị popup
+                productPopup.classList.add('active');
+                document.body.style.overflow = 'hidden';
+            });
+        });
+        
+        // Đóng popup
+        closePopup.addEventListener('click', function() {
+            productPopup.classList.remove('active');
+            document.body.style.overflow = 'auto';
+        });
+        
+        // Đóng khi click bên ngoài
+        productPopup.addEventListener('click', function(e) {
+            if (e.target === this) {
+                this.classList.remove('active');
+                document.body.style.overflow = 'auto';
+            }
+        });
+        
+        // Thêm vào giỏ hàng
+        document.querySelector('.btn-add-to-cart').addEventListener('click', function() {
+            const productName = document.getElementById('popupProductName').textContent;
+            alert(`Đã thêm ${productName} vào giỏ hàng!`);
+            
+            // Có thể thêm logic thêm vào giỏ hàng ở đây
+        });
+    });
+</script>
+
+<script>
+    // Giỏ hàng
+    const cart = [];
+    
+    // DOM Elements
+    const cartIcon = document.getElementById('cartIcon');
+    const cartPopup = document.getElementById('cartPopup');
+    const cartCount = document.getElementById('cartCount');
+    const cartItems = document.getElementById('cartItems');
+    const cartItemCount = document.getElementById('cartItemCount');
+    const cartPopupTotal = document.getElementById('cartPopupTotal');
+    const btnCheckout = document.getElementById('btnCheckout');
+    
+    // Mở/đóng giỏ hàng
+    cartIcon.addEventListener('click', function(e) {
+        e.preventDefault();
+        cartPopup.classList.toggle('active');
+    });
+    
+    // Đóng khi click bên ngoài
+    document.addEventListener('click', function(e) {
+        if (!cartIcon.contains(e.target) && !cartPopup.contains(e.target)) {
+            cartPopup.classList.remove('active');
+        }
+    });
+    
+    // Thêm sản phẩm vào giỏ hàng (gọi từ nút thêm vào giỏ)
+    function addToCart(product) {
+        const existingItem = cart.find(item => item.id === product.id);
+        
+        if (existingItem) {
+            existingItem.quantity += 1;
+        } else {
+            cart.push({
+                ...product,
+                quantity: 1
+            });
+        }
+        
+        updateCart();
+        showAddToCartEffect(product);
+    }
+    
+    // Xóa sản phẩm khỏi giỏ hàng
+    function removeFromCart(productId) {
+        const index = cart.findIndex(item => item.id === productId);
+        if (index !== -1) {
+            cart.splice(index, 1);
+            updateCart();
+        }
+    }
+    
+    // Cập nhật hiển thị giỏ hàng
+    function updateCart() {
+        const totalItems = cart.reduce((sum, item) => sum + item.quantity, 0);
+        cartCount.textContent = totalItems;
+        cartItemCount.textContent = `${totalItems} sản phẩm`;
+        
+        const totalAmount = cart.reduce((sum, item) => sum + (item.price * item.quantity), 0);
+        cartPopupTotal.textContent = `${formatCurrency(totalAmount)}`;
+        
+        renderCartItems();
+    }
+    
+    // Hiển thị danh sách sản phẩm trong giỏ
+    function renderCartItems() {
+        if (cart.length === 0) {
+            cartItems.innerHTML = '<div class="empty-cart">Giỏ hàng trống</div>';
+            return;
+        }
+        
+        cartItems.innerHTML = cart.map(item => `
+            <div class="cart-item">
+                <div class="cart-item-image" style="background-image: url('${item.image}')"></div>
+                <div class="cart-item-info">
+                    <div class="cart-item-name">${item.name}</div>
+                    <div class="cart-item-price">${formatCurrency(item.price)} x ${item.quantity}</div>
+                </div>
+                <div class="cart-item-remove" onclick="removeFromCart('${item.id}')">
+                    <i class="fas fa-times"></i>
+                </div>
+            </div>
+        `).join('');
+    }
+    
+    // Định dạng tiền tệ
+    function formatCurrency(amount) {
+        return new Intl.NumberFormat('vi-VN', { 
+            style: 'currency', 
+            currency: 'VND',
+            minimumFractionDigits: 0
+        }).format(amount).replace('₫', 'đ');
+    }
+    
+    // Hiệu ứng khi thêm vào giỏ
+    function showAddToCartEffect(product) {
+        const effect = document.createElement('div');
+        effect.className = 'add-to-cart-effect';
+        effect.innerHTML = `<i class="fas fa-check"></i> Đã thêm ${product.name}`;
+        document.body.appendChild(effect);
+        
+        setTimeout(() => effect.classList.add('show'), 10);
+        setTimeout(() => {
+            effect.classList.remove('show');
+            setTimeout(() => effect.remove(), 300);
+        }, 2000);
+    }
+    
+    // Xử lý nút đặt hàng
+    btnCheckout.addEventListener('click', function() {
+        if (cart.length === 0) return;
+        alert('Chức năng đặt hàng sẽ được kích hoạt!');
+        // Có thể mở form đặt hàng ở đây
+    });
+</script>
 </body>
 </html>

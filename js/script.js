@@ -126,3 +126,32 @@ const reviewsSlider = new Swiper('.reviews-slider', {
   }
 });
 
+document.getElementById('headerOrderButton').addEventListener('click', function() {
+  document.getElementById('orderOverlay').style.display = 'flex';
+});
+
+window.addEventListener('scroll', function() {
+  const orderBtn = document.querySelector('.order-now-btn');
+  if (window.scrollY > 300) {
+      orderBtn.classList.add('pulse-effect');
+  } else {
+      orderBtn.classList.remove('pulse-effect');
+  }
+});
+
+
+//////
+
+document.querySelectorAll('.fa-shopping-cart').forEach(button => {
+  button.addEventListener('click', function(e) {
+      e.preventDefault();
+      const productBox = this.closest('.box');
+      const product = {
+          id: productBox.dataset.id,
+          name: productBox.querySelector('h3').textContent,
+          price: parseInt(productBox.querySelector('.price').textContent.replace(/\D/g,'')),
+          image: productBox.querySelector('img').src
+      };
+      addToCart(product);
+  });
+});
