@@ -155,3 +155,15 @@ document.querySelectorAll('.fa-shopping-cart').forEach(button => {
       addToCart(product);
   });
 });
+
+// document.addEventListener('DOMContentLoaded', function() {
+//   setTimeout(function() {
+//       const tooltip = document.querySelector('.order-tooltip');
+//       tooltip.classList.add('intro');
+      
+//       // // Ẩn tooltip sau 5 giây
+//       // setTimeout(function() {
+//       //     tooltip.classList.remove('intro');
+//       // }, 5000);
+//   }, 1000);
+// });
